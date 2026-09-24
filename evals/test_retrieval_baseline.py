@@ -84,6 +84,13 @@ DeepEval Metrics Evaluated
 ================================================================================
 """
 
+import sys
+
+# Ensure Windows consoles support unicode / emoji printing without charmap encoding crashes
+if sys.platform == "win32":
+    sys.stdout.reconfigure(encoding="utf-8")
+    sys.stderr.reconfigure(encoding="utf-8")
+
 from typing import List
 from deepeval import evaluate
 from deepeval.test_case import LLMTestCase
