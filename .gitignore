@@ -216,3 +216,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Chroma Vector Store & DeepEval Cache
+chroma_db/
+.deepeval/
